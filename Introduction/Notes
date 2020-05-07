@@ -1,0 +1,95 @@
+LESSON 1:
+A shell script -- a text file that contains a series of commands
+Commands executed one by one
+Same as typing each command into the terminal
+
+*nano installation -- sudo apt-get install -y nano
+-y : the flag that proceeds with the installation after the download
+ctrl+u -- to clear the line of command
+
+nano day1.sh
+chmod +x day1.sh
+./day1.sh
+
+Nothing special about the file name. Any valid file name is acceptable. Only in certain OSs the '.sh' extension matters.
+The files permissions matter. To be an executable.
+
+ls -l
+-rwxr-xr-x 1 kabilan kabilan  30 Apr 29 17:52 day1.sh
+-rw-r--r-- 1 kabilan kabilan 491 Apr 29 17:55 Notes
+
+- -- file/directory. It will be d
+rwx: 1st set -- admin permissions
+     2nd set -- the current group to which the user belongs to
+     3rd set -- whoever uses the system
+Then owner followed by the group
+r and x permissions required to execute the file
+
+
+
+
+
+
+LESSON 2:
+#! - sharp+bang - shebang
+This specifies the interpreter used.
+Here execution is done by /bin/bash.
+If not specified it is executed by the current shell.
+
+What happens when i do ./
+    .  -- current directory
+    .. -- parent directory
+/home/kabilan/Desktop/Shell_Scripting/day1.sh
+
+echo -- shell builtin
+type -- shell builtin
+
+type echo
+echo is a shell builtin
+
+type -a echo
+echo is a shell builtin
+echo is /usr/bin/echo
+echo is /bin/echo
+
+The path of the progra being executed when echo is called.
+/usr/bin/echo "Here I am!"
+
+When using builtins we avoid the issue of path being different in different systems. Also the script is portable.
+
+Type of the variable doesn't matter. And mind the space before and after the '=' sign.
+
+
+
+
+
+
+LESSON 3:
+Rules for naming variables -- the usual
+By convention, variable names are all uppercase. Can use mixed case also. Case-sensitive.
+
+Not enclosing the bracket causes the bash to not identify the variable.
+
+Variable reassignment is feasible.
+
+Comments -- #This is a comment
+Opening comment recommended. Programming practice. Blank lines to logically group lines of codes.
+
+
+
+
+
+
+LESSON 4:
+Psudo-code -- comments to for the basic structure of the file.
+Refer to all commands from sysinfo.sh
+
+
+
+
+
+
+LESSON 5:
+File is got-root.sh
+Can be used to check if the user is installing a software as root user.
+
